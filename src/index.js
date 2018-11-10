@@ -3,6 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ApolloClient from "apollo-boost";
+import gql from "graphql-tag";
+const client = new ApolloClient({
+    uri: 'http://api.kittyhawk.io/graphql?token=HWm0tPtem7oY2xJ8MBhPn7RpTTpXCaZF&'
+});
+
+client
+  .query({
+    query: gql`
+    {
+        account {
+          name
+        }
+      }
+    `
+  })
+  .then(result => console.log(result));
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
