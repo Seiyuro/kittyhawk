@@ -27,23 +27,30 @@
 
 // const { createApolloFetch } = require('apollo-fetch');
 
-import ApolloClient from "apollo-boost";
-import gql from "graphql-tag";
-const client = new ApolloClient({
-    uri: 'http://api.kittyhawk.io/graphql?token=HWm0tPtem7oY2xJ8MBhPn7RpTTpXCaZF'
-});
+// import ApolloClient from "apollo-boost";
+// import gql from "graphql-tag";
+// const client = new ApolloClient({
+//     uri: 'http://api.kittyhawk.io/graphql?token=HWm0tPtem7oY2xJ8MBhPn7RpTTpXCaZF'
+// });
 
-client
-  .query({
-    query: gql`
-      {
-        rates(currency: "USD") {
-          currency
-        }
-      }
-    `
-  })
-  .then(result => console.log(result));
+// client
+//   .query({
+//     query: gql`
+//     {
+//         account {
+//           name
+//             id
+//           owner {
+//             id
+//             last_name
+//             first_name
+//             email
+//           }
+//           }
+//       }
+//     `
+//   })
+//   .then(result => console.log(result));
 
 // fetch({
 //   query: '{ posts { title }}',
